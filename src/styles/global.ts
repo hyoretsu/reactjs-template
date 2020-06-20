@@ -17,12 +17,15 @@ export default createGlobalStyle`
  }
 
  #root {
-  margin: 0 auto;
-  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
  }
 
  button {
   cursor: pointer;
+  background: transparent;
+  border: none;
  }
  
  a {
