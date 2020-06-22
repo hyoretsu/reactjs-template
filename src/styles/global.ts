@@ -22,13 +22,17 @@ export default createGlobalStyle`
   justify-content: center;
  }
 
- button {
-  cursor: pointer;
-  background: transparent;
-  border: none;
+ p {
+  text-align: justify;
  }
  
  a {
  text-decoration: none;
+ }
+ 
+ button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
  }
 `;
