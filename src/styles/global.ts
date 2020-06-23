@@ -9,11 +9,8 @@ export default createGlobalStyle`
  }
 
  body {
-  -webkit-font-smoothing: antialiased;
- }
-
- body, input, button {
   font: 16px sans-serif;
+  -webkit-font-smoothing: antialiased;
  }
 
  #root {
@@ -31,9 +28,14 @@ export default createGlobalStyle`
  text-decoration: none;
  }
  
- button {
+ button,
+ img {
   cursor: pointer;
   background: transparent;
   border: none;
+ }
+
+ label{
+  cursor: text
  }
 `;
