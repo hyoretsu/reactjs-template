@@ -1,37 +1,35 @@
 {
- "name": ,
+ "name": "reactjs-template",
  "version": "1.0",
- "private": true,
- "dependencies": {
-  "axios": "^0.19.2",
-  "dotenv": "^8.2.0",
-  "oaf-react-router": "^2.1.1",
-  "polished": "^3.5.2",	
-  "react": "^16.13.1",
-  "react-dom": "^16.13.1",
-  "react-icons": "^3.10.0",
-  "react-loading": "^2.0.3",
-  "react-router-dom": "^5.1.2",
-  "react-scripts": "3.4.1",
-  "styled-components": "^5.1.0",
-  "yup": "^0.28.4"
+ "description": "",
+ "keywords": [],
+ "homepage": "",
+ "bugs": {
+  "url": "",
+  "email": ""
  },
+ "repository": {
+  "type": "git",
+  "url": ""
+ },
+ "license": "MIT",
+ "author": {
+  "name": "",
+  "email": "",
+  "url": ""
+ },
+ "contributors": [
+  {
+   "name": "",
+   "email": "",
+   "url": ""
+  }
+ ],
  "scripts": {
-  "start": "react-scripts start",
   "build": "react-scripts build",
-  "test": "react-scripts test --coverage --watchall false",
-  "eject": "react-scripts eject"
- },
- "eslintConfig": {
-  "extends": "react-app"
- },
- "jest": {
-  "collectCoverageFrom": [
-   "src/pages/**/*.tsx",
-   "src/components/**/*.tsx",
-   "src/hooks/*.tsx",
-   "!src/hooks/index.tsx"
-  ]
+  "eject": "react-scripts eject",
+  "start": "react-scripts start",
+  "test": "react-scripts test --coverage --watchall false"
  },
  "browserslist": {
   "production": [
@@ -44,6 +42,31 @@
    "last 1 firefox version",
    "last 1 safari version"
   ]
+ },
+ "eslintConfig": {
+  "extends": "react-app"
+ },
+ "jest": {
+  "collectCoverageFrom": [
+   "src/pages/**/*.tsx",
+   "src/components/**/*.tsx",
+   "src/hooks/*.tsx",
+   "!src/hooks/index.tsx"
+  ]
+ },
+ "dependencies": {
+  "axios": "^0.19.2",
+  "dotenv": "^8.2.0",
+  "oaf-react-router": "^2.1.1",
+  "polished": "^3.5.2",
+  "react": "^16.13.1",
+  "react-dom": "^16.13.1",
+  "react-icons": "^3.10.0",
+  "react-loading": "^2.0.3",
+  "react-router-dom": "^5.1.2",
+  "react-scripts": "3.4.1",
+  "styled-components": "^5.1.0",
+  "yup": "^0.28.4"
  },
  "devDependencies": {
   "@testing-library/jest-dom": "^4.2.4",
