@@ -45,7 +45,7 @@
    "warn",
    {
     "newlinesBetween": "always",
-    "groups": ["module", ["/^components/", "parent"], "/^assets/", "sibling"],
+    "groups": ["module", "/^components/", ["parent", "/^services/"], "/^assets/", "sibling"],
     "alphabetize": {
      "order": "asc",
      "ignoreCase": false

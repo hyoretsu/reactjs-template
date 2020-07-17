@@ -31,6 +31,18 @@
   "start": "react-scripts start",
   "test": "react-scripts test --coverage --watchall false"
  },
+ "husky": {
+  "hooks": {
+   "pre-commit": "lint-staged"
+  }
+ },
+ "lint-staged": {
+  "src/**/*.ts": [
+   "eslint --fix",
+   "yarn test --bail --findRelatedTests",
+   "git add"
+  ]
+ },
  "browserslist": {
   "production": [
    ">0.2%",
@@ -88,10 +100,13 @@
   "eslint-config-prettier": "^6.11.0",
   "eslint-import-resolver-typescript": "^2.0.0",
   "eslint-plugin-import": "^2.22.0",
+  "eslint-plugin-import-helpers": "^1.1.0",
   "eslint-plugin-jsx-a11y": "^6.3.1",
   "eslint-plugin-prettier": "^3.1.4",
   "eslint-plugin-react": "^7.20.3",
   "eslint-plugin-react-hooks": "^4.0.8",
+  "husky": "^4.2.5",
+  "lint-staged": "^10.2.11",
   "prettier": "^2.0.5",
   "react-test-renderer": "^16.13.1",
   "ts-jest": "^26.1.2",
