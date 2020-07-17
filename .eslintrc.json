@@ -45,9 +45,10 @@
    "warn",
    {
     "newlinesBetween": "always",
-    "groups": ["module", "/^@/", ["parent", "sibling", "index"]],
+    "groups": ["module", ["/^components/", "parent"], "/^assets/", "sibling"],
     "alphabetize": {
-     "order": "asc"
+     "order": "asc",
+     "ignoreCase": false
     }
    }
   ],
