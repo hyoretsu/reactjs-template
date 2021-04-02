@@ -1,7 +1,6 @@
-import React from 'react';
 import ReactLoading from 'react-loading';
 
-import { Container } from './styles';
+import Container from './styles';
 
 const Loading: React.FC = () => (
  <Container>

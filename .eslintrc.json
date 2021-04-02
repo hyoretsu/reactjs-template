@@ -9,7 +9,7 @@
   "plugin:@typescript-eslint/recommended",
   "plugin:prettier/recommended",
   "plugin:react/recommended",
-  "prettier/@typescript-eslint"
+  "prettier"
  ],
  "globals": {
   "Atomics": "readonly",
@@ -25,12 +25,10 @@
  },
  "plugins": ["@typescript-eslint", "eslint-plugin-import-helpers", "prettier", "react", "react-hooks"],
  "rules": {
-  "@typescript-eslint/explicit-function-return-type": [
-   "error",
-   { "allowExpressions": true }
-  ],
+  "@typescript-eslint/explicit-function-return-type": ["error", { "allowExpressions": true }],
   "@typescript-eslint/no-explicit-any": "off",
   "@typescript-eslint/no-unused-vars": ["error"],
+  "@typescript-eslint/no-use-before-define": ["error"],
   "jsx-a11y/label-has-associated-control": "off",
   "import/extensions": [
    "error",
@@ -53,6 +51,7 @@
    }
   ],
   "no-unused-expressions": "off",
+  "no-use-before-define": "off",
   "prettier/prettier": "error",
   "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
   "react/jsx-indent": "off",
@@ -61,6 +60,7 @@
   "react/jsx-props-no-spreading": "off",
   "react/no-unescaped-entities": "off",
   "react/prop-types": "off",
+  "react/react-in-jsx-scope": "off",
   "react-hooks/exhaustive-deps": "error",
   "react-hooks/rules-of-hooks": "error"
  },
@@ -68,8 +68,6 @@
   "import/resolver": {
    "typescript": {}
   },
-  "node": {
-   "extensions": [".js", ".jsx", ".ts", ".tsx"]
-  }
+  "node": { "extensions": [".ts", ".tsx"] }
  }
 }

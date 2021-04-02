@@ -1,7 +1,6 @@
-import React from 'react';
 import { IoMdCloseCircleOutline } from 'react-icons/io';
 
-import { Container } from './styles';
+import Container from './styles';
 
 const Error: React.FC = () => {
  return (
