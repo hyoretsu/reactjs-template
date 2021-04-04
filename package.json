@@ -27,19 +27,20 @@
  ],
  "scripts": {
   "build": "webpack --mode=production",
+  "preinstall": "npx only-allow pnpm",
   "start": "webpack serve --open --hot --port 3000",
-  "test": "jest --coverage --watchAll false"
+  "test": "jest --coverage --watchAll false",
+  "update": "pnpm up -L && git add package.json pnpm-lock.yaml"
  },
  "husky": {
   "hooks": {
-   "pre-commit": "lint-staged"
+   "pre-commit": "pnpm run update && lint-staged"
   }
  },
  "lint-staged": {
-  "src/**/*.ts": [
+  "src/**/*.(ts|tsx)": [
    "eslint --fix",
-   "yarn test --bail --findRelatedTests",
-   "git add"
+   "yarn test --bail --findRelatedTests"
   ]
  },
  "dependencies": {
