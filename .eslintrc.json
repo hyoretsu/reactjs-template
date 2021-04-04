@@ -25,6 +25,7 @@
  },
  "plugins": ["@typescript-eslint", "eslint-plugin-import-helpers", "prettier", "react", "react-hooks"],
  "rules": {
+  "@typescript-eslint/ban-ts-comment": "off",
   "@typescript-eslint/explicit-function-return-type": ["error", { "allowExpressions": true }],
   "@typescript-eslint/no-explicit-any": "off",
   "@typescript-eslint/no-unused-vars": ["error"],
