@@ -42,24 +42,8 @@
    "git add"
   ]
  },
- "browserslist": {
-  "production": [
-   ">0.2%",
-   "not dead",
-   "not op_mini all"
-  ],
-  "development": [
-   "last 1 chrome version",
-   "last 1 firefox version",
-   "last 1 safari version"
-  ]
- },
- "eslintConfig": {
-  "extends": "react-app"
- },
  "dependencies": {
   "axios": "^0.21.1",
-  "dotenv": "^8.2.0",
   "polished": "^4.1.1",
   "react": "^17.0.2",
   "react-dom": "^17.0.2",
@@ -71,6 +55,7 @@
  },
  "devDependencies": {
   "@babel/core": "^7.13.14",
+  "@babel/eslint-parser": "^7.13.14",
   "@babel/preset-env": "^7.13.12",
   "@babel/preset-react": "^7.13.13",
   "@babel/preset-typescript": "^7.13.0",
@@ -100,7 +85,9 @@
   "eslint": "^7.23.0",
   "eslint-config-airbnb": "^18.2.1",
   "eslint-config-prettier": "^8.1.0",
+  "eslint-config-react-app": "^6.0.0",
   "eslint-import-resolver-typescript": "^2.4.0",
+  "eslint-plugin-flowtype": "^5.4.0",
   "eslint-plugin-import": "^2.22.1",
   "eslint-plugin-import-helpers": "^1.1.0",
   "eslint-plugin-jsx-a11y": "^6.4.1",
