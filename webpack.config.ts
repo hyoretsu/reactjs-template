@@ -3,7 +3,6 @@ import { gzip } from '@gfx/zopfli';
 import CompressionPlugin from 'compression-webpack-plugin';
 import HtmlWebPackPlugin from 'html-webpack-plugin';
 import path from 'path';
-import TerserPlugin from 'terser-webpack-plugin';
 import webpack from 'webpack';
 
 const config: webpack.Configuration = {
@@ -21,23 +20,16 @@ const config: webpack.Configuration = {
     use: ['style-loader', 'css-loader'],
    },
    {
+    test: /\.(jpe?g|png|gif)$/,
+    use: 'file-loader',
+   },
+   {
     test: /\.svg$/,
     use: '@svgr/webpack',
    },
   ],
  },
  optimization: {
-  minimizer: [
-   new TerserPlugin({
-    terserOptions: {
-     mangle: {
-      properties: {
-       builtins: true,
-      },
-     },
-    },
-   }),
-  ],
   splitChunks: {
    cacheGroups: {
     vendors: {
@@ -62,7 +54,7 @@ const config: webpack.Configuration = {
  },
  plugins: [
   new HtmlWebPackPlugin({
-   template: './public/index.html',
+   template: path.resolve(__dirname, 'public/index.html'),
   }),
   // @ts-ignore
   new CompressionPlugin({
@@ -83,10 +75,7 @@ const config: webpack.Configuration = {
   }),
  ],
  resolve: {
-  alias: {
-   react: path.resolve(__dirname, 'node_modules', 'react'),
-  },
-  extensions: ['.js', '.ts', '.tsx'],
+  extensions: ['.ts', '.tsx', '.js'],
   modules: [path.resolve(__dirname, 'src'), 'node_modules'],
  },
 };
