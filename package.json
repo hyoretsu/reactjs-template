@@ -28,14 +28,10 @@
  "scripts": {
   "build": "webpack --mode=production",
   "preinstall": "npx only-allow pnpm",
+  "prepare": "husky install",
   "start": "webpack serve --open --hot --port 3000",
   "test": "jest --coverage --watchAll false",
   "update": "pnpm up -L && git add package.json pnpm-lock.yaml"
- },
- "husky": {
-  "hooks": {
-   "pre-commit": "pnpm run update && lint-staged"
-  }
  },
  "lint-staged": {
   "src/**/*.(ts|tsx)": [
@@ -76,8 +72,8 @@
   "@types/styled-components": "^5.1.9",
   "@types/terser-webpack-plugin": "^5.0.3",
   "@types/yup": "^0.29.11",
-  "@typescript-eslint/eslint-plugin": "^4.20.0",
-  "@typescript-eslint/parser": "^4.20.0",
+  "@typescript-eslint/eslint-plugin": "^4.21.0",
+  "@typescript-eslint/parser": "^4.21.0",
   "axios-mock-adapter": "^1.19.0",
   "babel-jest": "^26.6.3",
   "babel-loader": "^8.2.2",
@@ -88,7 +84,7 @@
   "eslint-config-prettier": "^8.1.0",
   "eslint-config-react-app": "^6.0.0",
   "eslint-import-resolver-typescript": "^2.4.0",
-  "eslint-plugin-flowtype": "^5.4.0",
+  "eslint-plugin-flowtype": "^5.6.0",
   "eslint-plugin-import": "^2.22.1",
   "eslint-plugin-import-helpers": "^1.1.0",
   "eslint-plugin-jsx-a11y": "^6.4.1",
@@ -108,7 +104,7 @@
   "ts-jest": "^26.5.4",
   "ts-node": "^9.1.1",
   "typescript": "^4.2.3",
-  "webpack": "^5.30.0",
+  "webpack": "^5.31.0",
   "webpack-cli": "^4.6.0",
   "webpack-dev-server": "^3.11.2"
  }
