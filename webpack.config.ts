@@ -8,6 +8,9 @@ import webpack from 'webpack';
 const config: webpack.Configuration = {
  cache: true,
  devtool: 'source-map',
+ experiments: {
+  asset: true,
+ },
  module: {
   rules: [
    {
@@ -21,7 +24,7 @@ const config: webpack.Configuration = {
    },
    {
     test: /\.(jpe?g|png|gif)$/,
-    use: 'file-loader',
+    type: 'asset',
    },
    {
     test: /\.svg$/,
