@@ -1,9 +1,9 @@
 {
  "lang": "pt-BR",
  "dir": "ltr",
- "name": ,
- "description": ,
- "short_name": ,
+ "name": "",
+ "description": "",
+ "short_name": "",
  "icons": [
   {
    "src": "favicon/android-chrome-36x36.png",
@@ -41,7 +41,7 @@
    "type": "image/png"
   }
  ],
- "categories": ,
+ "categories": "",
  "scope": "/",
  "start_url": "/",
  "display": "standalone",

@@ -52,8 +52,15 @@
     }
    }
   ],
+  "no-param-reassign": [
+   "error",
+   {
+    "ignorePropertyModificationsFor": ["accumulator"]
+   }
+  ],
   "no-unused-expressions": "off",
   "no-use-before-define": "off",
+  "prefer-destructuring": "warn",
   "prettier/prettier": "error",
   "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
   "react/jsx-indent": "off",
