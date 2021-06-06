@@ -1,6 +1,4 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import { gzip } from '@gfx/zopfli';
-import CompressionPlugin from 'compression-webpack-plugin';
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
@@ -119,19 +117,6 @@ const config: webpack.Configuration = {
      entrypoints: entrypointFiles,
     };
    },
-  }),
-  new CompressionPlugin({
-   algorithm: gzip,
-   filename: `[path][base].gz`,
-   test: /\.(js|css|html|svg)$/,
-  }),
-  new CompressionPlugin({
-   algorithm: 'brotliCompress',
-   compressionOptions: {
-    level: 11,
-   },
-   filename: '[path][base].br',
-   test: /\.(js|css|html|svg)$/,
   }),
  ].filter(Boolean),
 };
