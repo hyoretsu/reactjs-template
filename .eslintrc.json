@@ -1,7 +1,7 @@
 {
  "env": {
   "browser": true,
-  "es6": true,
+  "es2021": true,
   "jest": true
  },
  "extends": [
@@ -21,7 +21,7 @@
   "ecmaFeatures": {
    "jsx": true
   },
-  "ecmaVersion": 2018,
+  "ecmaVersion": 12,
   "sourceType": "module"
  },
  "plugins": ["@typescript-eslint", "eslint-plugin-import-helpers", "prettier", "react", "react-hooks"],
@@ -29,7 +29,7 @@
   "@typescript-eslint/ban-ts-comment": "off",
   "@typescript-eslint/explicit-function-return-type": ["error", { "allowExpressions": true }],
   "@typescript-eslint/no-explicit-any": "off",
-  "@typescript-eslint/no-unused-vars": ["error"],
+  "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
   "@typescript-eslint/no-use-before-define": ["error"],
   "jsx-a11y/label-has-associated-control": "off",
   "import/extensions": [
@@ -77,6 +77,6 @@
   "import/resolver": {
    "typescript": {}
   },
-  "node": { "extensions": [".ts", ".tsx"] }
+  "node": { "extensions": [".js", ".ts", ".tsx"] }
  }
 }

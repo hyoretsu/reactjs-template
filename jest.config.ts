@@ -7,14 +7,12 @@ const config: Config.InitialOptions = {
  collectCoverageFrom: ['src/pages/**/*.tsx', 'src/components/**/*.tsx', 'src/hooks/*.tsx', '!src/hooks/index.tsx'],
  coverageDirectory: 'coverage',
  coverageReporters: ['text-summary', 'lcov'],
- moduleFileExtensions: ['tsx', 'ts', 'js', 'json', 'jsx'],
+ moduleFileExtensions: ['tsx', 'ts', 'js', 'json'],
  preset: 'ts-jest',
  roots: ['<rootDir>/src'],
- setupFiles: ['react-app-polyfill/jsdom'],
- setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
+ setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
  testMatch: ['<rootDir>/src/__tests__/**/*.spec.{ts,tsx}'],
  transformIgnorePatterns: ['<rootDir>/node_modules/'],
- watchPlugins: ['typeahead/filename', 'typeahead/testname'],
 };
 
 export default config;
