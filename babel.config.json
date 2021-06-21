@@ -1,0 +1,5 @@
+{
+ "ignore": ["src/__tests__/*", "src/data/@types/*"],
+ "plugins": [["babel-plugin-styled-components", { "pure": true, "ssr": true }]],
+ "presets": ["next/babel"]
+}

@@ -13,21 +13,22 @@ export default createGlobalStyle`
   -webkit-font-smoothing: antialiased;
  }
 
- #root {
+ #__next {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
  }
 
  p {
   hyphens: auto;
   text-align: justify;
  }
- 
+
  a {
- text-decoration: none;
+  text-decoration: none;
  }
- 
+
  button,
  img {
   cursor: pointer;
