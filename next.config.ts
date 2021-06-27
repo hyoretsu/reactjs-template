@@ -1,4 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
+import withLinaria from 'next-linaria';
 import { PHASE_DEVELOPMENT_SERVER } from 'next/constants';
 import { NextConfig } from 'next/dist/next-server/server/config';
 import webpack from 'webpack';
@@ -14,7 +15,6 @@ const nextConf = (phase: string): NextConfig => {
    defaultLocale: 'en',
   },
   images: {
-   disableStaticImages: true,
    domains: [''],
   },
   productionBrowserSourceMaps: true,
@@ -23,10 +23,25 @@ const nextConf = (phase: string): NextConfig => {
    ignoreBuildErrors: true,
   },
   webpack: (config: webpack.Configuration) => {
-   config.module.rules.push({
-    test: /\.svg$/,
-    use: ['@svgr/webpack'],
-   });
+   config.module.rules.push(
+    {
+     test: /\.(js|ts)x?$/,
+     exclude: /node_modules/,
+     use: [
+      {
+       loader: 'linaria/loader',
+       options: {
+        cacheDirectory: '.next/cache/linaria',
+        extension: '.linaria.module.css',
+       },
+      },
+     ],
+    },
+    {
+     test: /\.svg$/,
+     use: ['@svgr/webpack'],
+    },
+   );
    Object.assign(config.optimization.splitChunks, {
     cacheGroups: {
      ui: {
@@ -48,7 +63,7 @@ const nextConf = (phase: string): NextConfig => {
   Object.assign(baseConf, {});
  }
 
- return baseConf;
+ return withLinaria(baseConf);
 };
 
 export default nextConf;

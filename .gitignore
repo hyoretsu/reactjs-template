@@ -1,6 +1,7 @@
 .vscode/
 !.vscode/launch.json
 *.log
+.linaria-cache
 next-sitemap.js
 next.config.js
 robots.txt
