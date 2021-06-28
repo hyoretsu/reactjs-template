@@ -1,17 +1,45 @@
+/* eslint-disable camelcase */
+import { DefaultSeo } from 'next-seo';
 import { AppProps } from 'next/app';
-import Head from 'next/head';
+import { useRouter } from 'next/router';
 import { ReactElement } from 'react';
 
-import { siteName } from './_document';
+import appPackageJson from '../../package.json';
+import { siteName as site_name } from './_document';
 import '@public/fonts.css';
 import '@public/global.css';
 
 const MyApp = ({ Component, pageProps }: AppProps): ReactElement => {
+ const { homepage: url } = appPackageJson;
+ const { pathname } = useRouter();
+
  return (
   <>
-   <Head>
-    <title>{siteName}</title>
-   </Head>
+   <DefaultSeo
+    additionalMetaTags={[{ property: 'og:locale:alternate', content: 'pt_BR' }]}
+    defaultTitle={site_name}
+    facebook={{ appId: String(process.env.NEXT_PUBLIC_FACEBOOK_APP_ID) }}
+    languageAlternates={[{ hrefLang: 'pt-BR', href: `${url}/pt` }]}
+    openGraph={{
+     images: [
+      {
+       url: `${url}/images/opengraph.png`,
+       width: 1200,
+       height: 627,
+       alt: site_name,
+      },
+     ],
+     // locale: 'en_US',
+     site_name,
+     type: 'website',
+     url: url + pathname,
+    }}
+    titleTemplate={`%s | ${site_name}`}
+    twitter={{
+     cardType: 'summary_large_image',
+     site: `@${process.env.NEXT_PUBLIC_SITE_OWNER}` || '@hyoretsu',
+    }}
+   />
    <Component {...pageProps} />
   </>
  );
