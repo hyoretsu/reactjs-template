@@ -18,7 +18,6 @@ class MyDocument extends Document {
      <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
      <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
      <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png" />
-     <link rel="icon" type="image/png" sizes="194x194" href="/favicons/favicon-194x194.png" />
      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#fff" />
      <link rel="manifest" href="/site.webmanifest" />
      <meta name="application-name" content={siteName} />
