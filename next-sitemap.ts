@@ -3,7 +3,6 @@ import { IConfig } from 'next-sitemap';
 
 import { homepage as siteUrl } from './package.json';
 
-// @ts-ignore
 const config: IConfig = {
  alternateRefs: [
   {
@@ -11,7 +10,9 @@ const config: IConfig = {
    hreflang: 'pt',
   },
  ],
+ changefreq: 'monthly',
  generateRobotsTxt: true,
+ priority: 1,
  siteUrl,
 };
 

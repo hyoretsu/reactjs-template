@@ -2,7 +2,7 @@
  "env": {
   "es6": true
  },
- "extends": ["airbnb", "prettier"],
+ "extends": ["airbnb", "plugin:prettier/recommended", "prettier"],
  "globals": {
   "Atomics": "readonly",
   "SharedArrayBuffer": "readonly"
@@ -20,7 +20,7 @@
     "ignorePropertyModificationsFor": ["accumulator"]
    }
   ],
-  "no-unused-expressions": "off",
+  "no-unused-expressions": ["off", { "allowShortCircuit": true }],
   "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
   "no-use-before-define": "off",
   "prefer-destructuring": "warn",
@@ -34,13 +34,7 @@
     "es2021": true,
     "jest": true
    },
-   "extends": [
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
-    "plugin:react/recommended",
-    "next",
-    "next/core-web-vitals"
-   ],
+   "extends": ["plugin:@typescript-eslint/recommended", "plugin:react/recommended", "next", "next/core-web-vitals"],
    "parser": "@typescript-eslint/parser",
    "parserOptions": {
     "ecmaFeatures": {
@@ -48,8 +42,9 @@
     },
     "ecmaVersion": 12
    },
-   "plugins": ["@typescript-eslint", "eslint-plugin-import-helpers", "react", "react-hooks"],
+   "plugins": ["@typescript-eslint", "import-helpers", "react", "react-hooks"],
    "rules": {
+    "@next/next/no-img-element": "off",
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/explicit-function-return-type": ["error", { "allowExpressions": true }],
     "@typescript-eslint/no-explicit-any": "off",
@@ -62,6 +57,7 @@
       "tsx": "never"
      }
     ],
+    "import/prefer-default-export": "off",
     "import-helpers/order-imports": [
      "warn",
      {
@@ -98,6 +94,6 @@
   }
  ],
  "settings": {
-  "node": { "extensions": [".js", ".ts", ".tsx"] }
+  "node": { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
  }
 }

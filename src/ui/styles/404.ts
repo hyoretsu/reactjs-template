@@ -1,4 +1,4 @@
-import { styled } from 'linaria/react';
+import { styled } from '@linaria/react';
 
 const Container = styled.div`
  display: flex;
@@ -8,13 +8,13 @@ const Container = styled.div`
  height: 100vh;
 
  svg {
-  color: #ff0000;
+  color: #f00;
   width: auto;
-  height: 18%;
+  height: 20%;
  }
 
  span {
-  font-size: 1.8em;
+  font-size: 2em;
  }
 `;
 

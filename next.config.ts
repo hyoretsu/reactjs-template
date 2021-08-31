@@ -17,31 +17,20 @@ const nextConf = (phase: string): NextConfig => {
   images: {
    domains: [''],
   },
+  linaria: {
+   cacheDirectory: '.next/cache/linaria',
+   sourceMap: process.env.NODE_ENV === 'production',
+  },
   productionBrowserSourceMaps: true,
   reactStrictMode: true,
   typescript: {
    ignoreBuildErrors: true,
   },
   webpack: (config: webpack.Configuration) => {
-   config.module.rules.push(
-    {
-     test: /\.(js|ts)x?$/,
-     exclude: /node_modules/,
-     use: [
-      {
-       loader: 'linaria/loader',
-       options: {
-        cacheDirectory: '.next/cache/linaria',
-        extension: '.linaria.module.css',
-       },
-      },
-     ],
-    },
-    {
-     test: /\.svg$/,
-     use: ['@svgr/webpack'],
-    },
-   );
+   config.module.rules.push({
+    test: /\.svg$/,
+    use: ['@svgr/webpack'],
+   });
    Object.assign(config.optimization.splitChunks, {
     cacheGroups: {
      ui: {

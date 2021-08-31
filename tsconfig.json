@@ -12,6 +12,11 @@
   "jsx": "preserve",
   "lib": ["dom", "dom.iterable", "esnext"],
   "module": "commonjs",
+  "moduleResolution": "node",
+  "noEmit": true,
+  "noFallthroughCasesInSwitch": true,
+  "noImplicitAny": true,
+  "outDir": "./build",
   "paths": {
    "@api": ["data/services/api"],
    "@assets/*": ["../public/images/*"],
@@ -21,11 +26,6 @@
    "@styles/*": ["ui/styles/*"],
    "@utils/*": ["data/utils/*"]
   },
-  "moduleResolution": "node",
-  "noEmit": true,
-  "noFallthroughCasesInSwitch": true,
-  "noImplicitAny": true,
-  "outDir": "./build",
   "resolveJsonModule": true,
   "skipLibCheck": true,
   "strict": true,

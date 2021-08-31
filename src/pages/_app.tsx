@@ -6,8 +6,8 @@ import { ReactElement } from 'react';
 
 import appPackageJson from '../../package.json';
 import { siteName as site_name } from './_document';
-import '@public/fonts.css';
 import '@public/global.css';
+import '@public/fonts.css';
 
 const MyApp = ({ Component, pageProps }: AppProps): ReactElement => {
  const { homepage: url } = appPackageJson;
@@ -37,7 +37,8 @@ const MyApp = ({ Component, pageProps }: AppProps): ReactElement => {
     titleTemplate={`%s | ${site_name}`}
     twitter={{
      cardType: 'summary_large_image',
-     site: `@${process.env.NEXT_PUBLIC_SITE_OWNER}` || '@hyoretsu',
+     handle: `${process.env.NEXT_PUBLIC_SITE_CONTENT_CREATOR}` || '@hyoretsu',
+     site: `${process.env.NEXT_PUBLIC_SITE_OWNER}` || '@hyoretsu',
     }}
    />
    <Component {...pageProps} />
