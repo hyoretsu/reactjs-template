@@ -23,6 +23,7 @@ const nextConf = (phase: string): NextConfig => {
   },
   productionBrowserSourceMaps: true,
   reactStrictMode: true,
+  swcMinify: true,
   typescript: {
    ignoreBuildErrors: true,
   },
