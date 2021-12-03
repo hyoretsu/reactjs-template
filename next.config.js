@@ -1,14 +1,12 @@
-/* eslint-disable import/no-extraneous-dependencies */
-import withLinaria from 'next-linaria';
-import { PHASE_DEVELOPMENT_SERVER } from 'next/constants';
-import { NextConfig } from 'next/dist/next-server/server/config';
-import webpack from 'webpack';
+const { PHASE_DEVELOPMENT_SERVER } = require('next/constants');
 
-const nextConf = (phase: string): NextConfig => {
- // @ts-ignore
- const baseConf: NextConfig = {
+module.exports = phase => {
+ const baseConf = {
   eslint: {
    ignoreDuringBuilds: true,
+  },
+  experimental: {
+   styledComponents: true,
   },
   i18n: {
    locales: ['en', 'pt'],
@@ -27,7 +25,7 @@ const nextConf = (phase: string): NextConfig => {
   typescript: {
    ignoreBuildErrors: true,
   },
-  webpack: (config: webpack.Configuration) => {
+  webpack: config => {
    config.module.rules.push({
     test: /\.svg$/,
     use: ['@svgr/webpack'],
@@ -53,7 +51,5 @@ const nextConf = (phase: string): NextConfig => {
   Object.assign(baseConf, {});
  }
 
- return withLinaria(baseConf);
+ return baseConf;
 };
-
-export default nextConf;
