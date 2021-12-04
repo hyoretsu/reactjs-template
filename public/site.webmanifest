@@ -9,18 +9,18 @@
  "dir": "ltr",
  "background_color": "#ffffff",
  "theme_color": "#ffffff",
- "screenshots": [
-  {
-   "src": "",
-   "sizes": "1280x720",
-   "type": "image/webp"
-  }
- ],
  "shortcuts": [
   {
    "name": "Homepage",
    "url": "/",
    "description": "Initial page"
+  }
+ ],
+ "screenshots": [
+  {
+   "src": "",
+   "sizes": "1280x720",
+   "type": "image/webp"
   }
  ],
  "icons": [

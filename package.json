@@ -1,6 +1,6 @@
 {
  "name": "reactjs-template",
- "version": "2.4.0",
+ "version": "2.4.1",
  "private": true,
  "description": "A boilerplate for Next.js",
  "keywords": [
@@ -61,13 +61,6 @@
   "yup": "^0.32.11"
  },
  "devDependencies": {
-  "@babel/cli": "^7.16.0",
-  "@babel/core": "^7.16.0",
-  "@babel/plugin-transform-runtime": "^7.16.4",
-  "@babel/preset-env": "^7.16.4",
-  "@babel/preset-react": "^7.16.0",
-  "@linaria/shaker": "^3.0.0-beta.15",
-  "@linaria/webpack-loader": "^3.0.0-beta.16",
   "@next/eslint-plugin-next": "^12.0.4",
   "@svgr/webpack": "^6.1.0",
   "@types/enzyme": "^3.10.10",
@@ -82,8 +75,6 @@
   "@typescript-eslint/parser": "^5.5.0",
   "@wojtekmaj/enzyme-adapter-react-17": "^0.6.5",
   "axios-mock-adapter": "^1.20.0",
-  "babel-jest": "^27.4.2",
-  "babel-plugin-add-module-exports": "^1.0.4",
   "enzyme": "^3.11.0",
   "eslint": "^8.3.0",
   "eslint-config-airbnb": "^19.0.2",
