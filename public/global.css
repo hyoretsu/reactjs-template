@@ -33,6 +33,10 @@ img {
  border: none;
 }
 
+button:disabled {
+ cursor: default;
+}
+
 label {
  cursor: text;
 }
