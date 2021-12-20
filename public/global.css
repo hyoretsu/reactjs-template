@@ -27,7 +27,8 @@ a {
 }
 
 button,
-img {
+img,
+svg {
  cursor: pointer;
  background: transparent;
  border: none;
